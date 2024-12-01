@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     systemSettings = {
       system = "x86_64-linux"; # system arch
@@ -54,5 +54,19 @@
       ];
      };
    };
+
+  homeConfigurations = {
+    user = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [
+        ./hosts/mars/home.nix
+      ];
+      extraSpecialArgs = {
+        inherit systemSettings;
+        inherit userSettings;
+        inherit inputs;
+      };
+    };
+  };
   };
 }
