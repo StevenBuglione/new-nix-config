@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ../../modules/user/apps/git/git.nix
+      ../../modules/user/apps/ssh/ssh.nix
     ];
   home.username = "sbuglione";
   home.homeDirectory = "/home/sbuglione";
@@ -56,7 +57,6 @@
     ".config/starship.toml".source = ../../modules/user/apps/starship/starship.toml;
     ".config/kitty/kitty.conf".source = ../../modules/user/apps/kitty/kitty.conf;
     ".local/share/fonts/JetbrainsMono".source = ../../modules/user/apps/fonts/JetbrainsMono;
-    ".ssh/config".source = ../../modules/user/apps/ssh/config;
     ".zshrc".source = ../../modules/user/apps/zsh/.zshrc;
     ".oh-my-zsh/custom/plugins/zsh-autosuggestions".source = ../../modules/user/apps/zsh/plugins/zsh-autosuggestions;
     ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting".source = ../../modules/user/apps/zsh/plugins/zsh-syntax-highlighting;
