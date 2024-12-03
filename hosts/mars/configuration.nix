@@ -19,5 +19,11 @@
   ];
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   system.stateVersion = "24.11";
 }

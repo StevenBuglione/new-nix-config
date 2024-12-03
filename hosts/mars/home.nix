@@ -50,6 +50,7 @@
       podman-desktop
       dconf-editor
       postman
+      go
     ];
 
     file = {
