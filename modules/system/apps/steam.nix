@@ -1,11 +1,16 @@
-{ config, pkgs, userSettings, ... }:
+{
+  config,
+  pkgs,
+  userSettings,
+  ...
+}:
 
 {
   programs = {
     steam = {
       enable = true;
-      remotePlay.openFirewall = true; 
-      dedicatedServer.openFirewall = true; 
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
     };
   };

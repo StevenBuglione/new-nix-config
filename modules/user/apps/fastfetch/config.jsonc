@@ -13,8 +13,10 @@
   },
   "modules": [
     {
-      "type": "custom", // HardwareStart
-      "format": "┌─────────── \u001b[1mHardware Information\u001b[0m ───────────┐" // `\u001b` is `\033`, or `\e`
+      "type": "custom",
+      // HardwareStart
+      "format": "┌─────────── \u001b[1mHardware Information\u001b[0m ───────────┐"
+      // `\u001b` is `\033`, or `\e`
     },
     {
       "type": "host",
@@ -38,12 +40,14 @@
       "key": "  "
     },
     {
-      "type": "custom", // SoftwareStart
+      "type": "custom",
+      // SoftwareStart
       "format": "├─────────── \u001b[1mSoftware Information\u001b[0m ───────────┤"
     },
     {
       "type": "os",
-      "key": "  " // Just get your distro's logo off nerdfonts.com,
+      "key": "  "
+      // Just get your distro's logo off nerdfonts.com,
     },
     {
       "type": "kernel",
@@ -74,7 +78,8 @@
       "keyColor": "magenta"
     },
     {
-      "type": "custom", // InformationEnd
+      "type": "custom",
+      // InformationEnd
       "format": "└────────────────────────────────────────────┘"
     },
     {

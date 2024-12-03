@@ -1,13 +1,18 @@
-{ config, pkgs, userSettings, ... }:
+{
+  config,
+  pkgs,
+  userSettings,
+  ...
+}:
 
 {
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ../../modules/user/apps/git/git.nix
-      ../../modules/user/apps/ssh/ssh.nix
-    ];
-  
+  imports = [
+    # Include the results of the hardware scan.
+    ../../modules/user/apps/git/git.nix
+    ../../modules/user/apps/ssh/ssh.nix
+  ];
+
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -69,7 +74,7 @@
       enable = true;
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git"];
+        plugins = [ "git" ];
       };
     };
   };

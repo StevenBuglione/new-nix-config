@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   home.packages = [ pkgs.git ];
@@ -9,13 +14,13 @@
     userEmail = "stevenbuglione1@gmail.com";
     extraConfig = {
       gpg = {
-        format = "ssh";  # Set GPG format to SSH
+        format = "ssh"; # Set GPG format to SSH
       };
       "gpg \"ssh\"" = {
-        program = "${lib.getExe' pkgs._1password-gui "op-ssh-sign"}";  # Corrected path for 1Password's SSH signing program
+        program = "${lib.getExe' pkgs._1password-gui "op-ssh-sign"}"; # Corrected path for 1Password's SSH signing program
       };
       commit = {
-        gpgsign = true;  # Enable GPG signing for commits
+        gpgsign = true; # Enable GPG signing for commits
       };
       user = {
         signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIADXEW0ESKUfvgzAYIuHH/Rehcvhm8j4op7VlpLClfvC";

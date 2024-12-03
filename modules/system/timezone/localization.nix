@@ -1,4 +1,9 @@
-{ config, pkgs, systemSettings, ... }:
+{
+  config,
+  pkgs,
+  systemSettings,
+  ...
+}:
 
 {
   i18n.defaultLocale = "${systemSettings.locale}";
