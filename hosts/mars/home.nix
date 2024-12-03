@@ -18,10 +18,8 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      gnomeExtensions.emoji-copy
       gnomeExtensions.blur-my-shell
-      gnomeExtensions.gsconnect
-      gnomeExtensions.dash-to-dock
+      gnomeExtensions.tiling-shell
       just
       parted
       neovim
@@ -41,6 +39,12 @@
       helm
       kubectl
       xclip
+      kitty
+      spotify
+      jetbrains-toolbox
+      podman-desktop
+      dconf-editor
+      postman
     ];
 
     file = {
@@ -68,7 +72,13 @@
         plugins = [ "git"];
       };
     };
-	};
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/wm/preferences" = {
+      "button-layout" = ":minimize,maximize,close";
+    };
+  };
 
   programs.home-manager.enable = true;
 }

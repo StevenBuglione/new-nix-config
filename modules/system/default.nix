@@ -11,6 +11,7 @@
       ./timezone/default.nix
       ./users/sbuglione/sbuglione.nix
       ./wm/gnome.nix
+      ./virtualisation/default.nix
     ];
 
 }
