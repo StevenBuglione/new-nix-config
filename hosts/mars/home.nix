@@ -40,6 +40,7 @@
       ripgrep
       helm
       kubectl
+      xclip
     ];
 
     file = {
