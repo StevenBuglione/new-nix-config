@@ -15,6 +15,7 @@
     ../../modules/user/apps/kitty/kitty.nix
     ../../modules/user/apps/starship/starship.nix
     ../../modules/user/apps/fastfetch/fastfetch.nix
+    ../../modules/user/apps/gnome/gnome.nix
   ];
 
   nixpkgs.config = {
@@ -27,8 +28,6 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      gnomeExtensions.blur-my-shell
-      gnomeExtensions.tiling-shell
       just
       parted
       neovim
@@ -57,23 +56,6 @@
       shfmt
       pre-commit
     ];
-
-    file =
-      {
-      };
-  };
-
-  programs = {
-    vscode = {
-      enable = true;
-      package = pkgs.vscode.fhs;
-    };
-  };
-
-  dconf.settings = {
-    "org/gnome/desktop/wm/preferences" = {
-      "button-layout" = ":minimize,maximize,close";
-    };
   };
 
   programs.home-manager.enable = true;
