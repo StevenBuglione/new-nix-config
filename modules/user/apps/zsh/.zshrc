@@ -65,6 +65,9 @@ alias oppwd='~/.1password/password.sh'
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
 
+alias hmu='home-manager switch --flake ~/.config/nix#user'
+alias nixos-rebuild='sudo nixos-rebuild switch --flake ~/.config/nix#mars'
+
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
@@ -155,7 +158,6 @@ alias docker-clean=' \
 alias f="find . | grep "
 
 # Home Manager alias to update config
-alias hmu='home-manager switch'
 alias k='kubectl'
 
 # Trim leading and trailing spaces (for scripts)

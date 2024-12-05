@@ -12,6 +12,9 @@
     ../../modules/user/apps/git/git.nix
     ../../modules/user/apps/ssh/ssh.nix
     ../../modules/user/apps/zsh/zsh.nix
+    ../../modules/user/apps/kitty/kitty.nix
+    ../../modules/user/apps/starship/starship.nix
+    ../../modules/user/apps/fastfetch/fastfetch.nix
   ];
 
   nixpkgs.config = {
@@ -35,7 +38,6 @@
       bash-completion
       tree
       fontconfig
-      starship
       zoxide
       fzf
       multitail
@@ -45,7 +47,6 @@
       helm
       kubectl
       xclip
-      kitty
       spotify
       jetbrains-toolbox
       podman-desktop
@@ -53,14 +54,13 @@
       postman
       go
       treefmt
-            shfmt
+      shfmt
       pre-commit
     ];
 
-    file = {
-      ".config/fastfetch/config.jsonc".source = ../../modules/user/apps/fastfetch/config.jsonc;
-      ".config/starship.toml".source = ../../modules/user/apps/starship/starship.toml;
-    };
+    file =
+      {
+      };
   };
 
   programs = {
