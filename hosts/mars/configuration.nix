@@ -25,5 +25,9 @@
     options = "--delete-older-than 30d";
   };
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
   system.stateVersion = "24.11";
 }

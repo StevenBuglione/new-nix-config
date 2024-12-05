@@ -1,10 +1,14 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ 
-      ./graphics.nix
-      ./printing.nix
-      ./sound.nix
-    ];
+  imports = [
+    ./graphics.nix
+    ./printing.nix
+    ./sound.nix
+  ];
 }

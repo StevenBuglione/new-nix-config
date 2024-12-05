@@ -1,9 +1,13 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ 
-      ./boot.nix
-    ];
+  imports = [
+    ./boot.nix
+  ];
 
 }

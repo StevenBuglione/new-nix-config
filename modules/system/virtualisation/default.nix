@@ -1,9 +1,13 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-     ./podman.nix
-    ];
+  imports = [
+    ./podman.nix
+  ];
 
 }

@@ -1,7 +1,12 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ ./features.nix
-    ];
+  imports = [
+    ./features.nix
+  ];
 }

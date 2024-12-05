@@ -1,0 +1,18 @@
+# treefmt.toml
+
+# Formatter for Nix files
+[formatter.nixfmt]
+command = "nixfmt"
+includes = ["**/*.nix"]
+
+# Formatter for Shell scripts (Bash, Zsh)
+[formatter.shfmt]
+command = "shfmt"
+includes = [
+    "**/*.sh",
+    "**/*.bash",
+    "**/*.zsh",
+    "**/.bashrc",
+    "**/.zshrc"
+]
+

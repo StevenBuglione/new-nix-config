@@ -1,10 +1,14 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ 
-      ./localization.nix
-      ./timezone.nix
-    ];
+  imports = [
+    ./localization.nix
+    ./timezone.nix
+  ];
 
 }
