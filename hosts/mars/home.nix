@@ -55,6 +55,7 @@
       treefmt
       shfmt
       pre-commit
+      devcontainer
     ];
   };
 
