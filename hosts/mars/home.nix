@@ -56,8 +56,25 @@
       shfmt
       pre-commit
       devcontainer
+      direnv
+      nodejs
+      gh
+      dotnetCorePackages.dotnet_9.sdk
+      dotnetCorePackages.dotnet_9.runtime
+    ];
+  };
+
+  programs.chromium = {
+    enable = true;
+    package = pkgs.brave;
+    extensions = [
+      "aeblfdkhhhdcdjpifhhbdiojplfjncoa"
     ];
   };
 
   programs.home-manager.enable = true;
 }
+
+# nix-collect-garbage -d
+# nix-store --optimise
+# nix-store --gc
