@@ -1,5 +1,12 @@
 { pkgs, ... }:
 {
+
+  home.packages = with pkgs.gnomeExtensions; [
+    system-monitor
+    blur-my-shell
+    tiling-shell
+  ];
+
   dconf = {
     enable = true;
     settings = {
@@ -31,10 +38,4 @@
       };
     };
   };
-
-  home.packages = with pkgs.gnomeExtensions; [
-    system-monitor
-    blur-my-shell
-    tiling-shell
-  ];
 }
