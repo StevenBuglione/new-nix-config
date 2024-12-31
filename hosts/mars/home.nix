@@ -43,7 +43,7 @@
       bat
       trash-cli
       ripgrep
-      helm
+      kubernetes-helm
       kubectl
       xclip
       spotify
@@ -59,8 +59,6 @@
       direnv
       nodejs
       gh
-      dotnetCorePackages.dotnet_9.sdk
-      dotnetCorePackages.dotnet_9.runtime
     ];
   };
 

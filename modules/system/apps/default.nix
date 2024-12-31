@@ -7,7 +7,6 @@
 
 {
   imports = [
-    ./steam.nix
     ./1password.nix
     ./jetbrains-lib.nix
   ];

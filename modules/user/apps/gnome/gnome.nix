@@ -5,6 +5,7 @@
     system-monitor
     blur-my-shell
     tiling-shell
+    caffeine
   ];
 
   dconf = {
@@ -16,6 +17,7 @@
           blur-my-shell.extensionUuid
           tiling-shell.extensionUuid
           system-monitor.extensionUuid
+          caffeine.extensionUuid
         ];
         disabled-extensions = [
           "dash-to-dock@micxgx.gmail.com"
