@@ -31,7 +31,10 @@
           "status-icons@gnome-shell-extensions.gcampax.github.com"
         ];
       };
-
+      "org/virt-manager/virt-manager/connections" = {
+        autoconnect = [ "qemu:///system" ];
+        uris = [ "qemu:///system" ];
+      };
       "org/gnome/desktop/wm/preferences" = {
         "button-layout" = ":minimize,maximize,close";
       };

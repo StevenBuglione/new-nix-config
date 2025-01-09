@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-snapd.url = "github:io12/nix-snapd";
+    nix-snapd.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,6 +15,7 @@
     {
       self,
       nixpkgs,
+      nix-snapd,
       home-manager,
       ...
     }@inputs:
@@ -54,6 +57,7 @@
             inherit userSettings;
           };
           modules = [
+            nix-snapd.nixosModules.default
             ./hosts/mars/configuration.nix
           ];
         };

@@ -14,6 +14,8 @@
       "wheel"
       "docker"
       "disk"
+      "libvirt"
+      "lxd"
     ];
     shell = pkgs.zsh;
     packages =

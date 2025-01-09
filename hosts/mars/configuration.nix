@@ -13,6 +13,7 @@
     ../../modules/system/default.nix
   ];
 
+  services.snap.enable = true;
   environment.systemPackages = [
     pkgs.nixd
     pkgs.nixfmt-rfc-style
