@@ -30,7 +30,7 @@
     packages = with pkgs; [
       just
       parted
-      neovim
+      vim
       curl
       xclip
       fastfetch
@@ -56,9 +56,13 @@
       shfmt
       pre-commit
       devcontainer
-      direnv
-      nodejs
       gh
+      rpi-imager
+      ptyxis
+      cmake
+      clang
+      zig
+      zls
     ];
   };
 
@@ -68,6 +72,16 @@
     extensions = [
       "aeblfdkhhhdcdjpifhhbdiojplfjncoa"
     ];
+  };
+
+  programs = {
+    direnv = {
+      enable = true;
+      enableBashIntegration = true; # see note on other shells below
+      nix-direnv.enable = true;
+    };
+
+    bash.enable = true; # see note on other shells below
   };
 
   programs.home-manager.enable = true;

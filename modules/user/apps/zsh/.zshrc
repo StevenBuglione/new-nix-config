@@ -12,9 +12,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # Set the default editor
-export EDITOR=nvim
-export VISUAL=nvim
-alias vim='nvim'
+export EDITOR=vim
+export VISUAL=vim
+
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -47,9 +47,8 @@ alias less='less -R'
 alias cls='clear'
 alias apt-get='sudo apt-get'
 alias multitail='multitail --no-repeat -c'
-alias vi='nvim'
 alias svi='sudo vi'
-alias vis='nvim "+set si"'
+alias vis='vim "+set si"'
 
 # Change directory aliases
 alias home='cd ~'
@@ -182,6 +181,8 @@ lazyg() {
 }
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
+export PATH=/home/sbuglione/.swift/6.0.3/usr/bin:"${PATH}"
+
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
